@@ -1,0 +1,49 @@
+{
+  "tasks": [
+    {
+      "list": "kitab oxu",
+      "duration": "2 saat",
+      "id": 1
+    },
+    {
+      "list": "koding",
+      "duration": "5 saat",
+      "id": 2
+    },
+    {
+      "list": "cleaning",
+      "duration": "2 saat",
+      "id": 3
+    },
+    {
+      "list": "walking",
+      "duration": "1 saat",
+      "id": 4
+    },
+    {
+      "list": "test ",
+      "duration": "1",
+      "id": 5
+    },
+    {
+      "list": "test 2",
+      "duration": "2",
+      "id": 6
+    },
+    {
+      "list": "test 3",
+      "duration": " 3",
+      "id": 7
+    },
+    {
+      "list": "test 4",
+      "duration": "4",
+      "id": 8
+    },
+    {
+      "list": "test 5 ",
+      "duration": "5",
+      "id": 9
+    }
+  ]
+}
