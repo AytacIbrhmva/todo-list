@@ -1,10 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Pagination from './Pagination';
+import { Button } from './Button';
+import { ThemeContext } from '../App';
 
 
 const Form = () => {
+
+    //theme
+    const {theme} = useContext(ThemeContext)
+    console.log(theme);
+    //theme END
 
     const [tasks, setTasks] = useState([]);
 
@@ -56,11 +63,12 @@ const Form = () => {
     const currentTasks = tasks.slice(firstIndex, lastIndex);
 
   return (
-    <div className='container w-50'>
-       <h1>todo list</h1>
+    <div className={theme == 'light' ? 'container w-50' : 'container w-50 bg-dark'} >
+        <Button />
+       <h1 className={theme == 'light' ? '' : 'text-light'}>todo list</h1>
        {/* Add post*/}
        <form className='mb-2' onSubmit={(e) => addSubmit(e)}>
-        <label className='form-label'>Add task</label>
+        <label className={theme == 'light' ? 'form-label' : 'form-label text-light'}>Add task</label>
         <div className='d-flex'>
             <div className='d-flex w-100'>
                 <input 

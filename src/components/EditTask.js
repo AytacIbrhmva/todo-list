@@ -1,8 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import axios from 'axios';
 import { useNavigate, useParams, Link } from 'react-router-dom';
+import { ThemeContext } from '../App';
 
 const EditTask = () => {
+
+    const {theme} = useContext(ThemeContext)
 
     const {id} = useParams();
     const navigate = useNavigate();
@@ -36,7 +39,7 @@ const EditTask = () => {
 
 
   return (
-    <div className='container w-50'>
+    <div className={theme == 'light' ? 'container w-50' : 'container w-50 bg-dark'}>
         <form onSubmit={e => onSubmit(e)} className='mb-2' >
             <label className='form-label'>Edit task</label>
             <div>
